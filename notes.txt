@@ -1,0 +1,2 @@
+Eventually rename backend folder to:
+LastName_FirstName_ProjectName_Capstone_Backend
