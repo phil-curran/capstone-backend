@@ -2,6 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
+import mongoose from "mongoose";
 
 // initialize app
 const app = express();
@@ -24,10 +25,23 @@ import checkListRoutes from "./routes/checklists.js";
 // use routes
 app.use("/api/checklists/", checkListRoutes);
 
+// connect to db
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    // start server
+    app.listen(process.env.PORT, () => {
+      console.log("Connected to Server & listening on port 4000.");
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 // port listener
-app.listen(process.env.PORT, () => {
-  console.log(`Server is listening on port ${process.env.PORT}...`);
-});
+// app.listen(process.env.PORT, () => {
+//   console.log(`Server is listening on port ${process.env.PORT}...`);
+// });
 
 // use routes
 
@@ -35,6 +49,6 @@ app.listen(process.env.PORT, () => {
 app.use("/api/checklists/", checkListRoutes);
 
 // DISPLAY ROUTES
-app.get("/", (req, res) => {
-  res.json({ msg: "Hello World!" });
-});
+// app.get("/", (req, res) => {
+//   res.json({ msg: "Hello World!" });
+// });
