@@ -90,3 +90,8 @@ const sleepSchema = new Schema({
   // restlessness percentage
   restlessness: Number,
 });
+
+
+https://www.fitbit.com/oauth2/authorize?client_id=23RSWS&response_type=code&code_challenge=XqZhDAgC4ZTvgO63c0k7owo~pbltnOqAtIwsBc5yRNNpF0eXv-ZSfIv9XLbtVmWFnAKW48Ej6neElq.Z96n~qsOxnVOkjlo~MEuY5R7EQ6lwbB4oCohtX9qOX8K3hn~V&code_challenge_method=S256&scope=activity%20heartrate%20location%20nutrition%20oxygen_saturation%20profile%20respiratory_rate%20settings%20sleep%20social%20temperature%20weight
+
+XqZhDAgC4ZTvgO63c0k7owo~pbltnOqAtIwsBc5yRNNpF0eXv-ZSfIv9XLbtVmWFnAKW48Ej6neElq.Z96n~qsOxnVOkjlo~MEuY5R7EQ6lwbB4oCohtX9qOX8K3hn~V

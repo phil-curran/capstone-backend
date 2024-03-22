@@ -31,17 +31,12 @@ mongoose
   .then(() => {
     // start server
     app.listen(process.env.PORT, () => {
-      console.log("Connected to Server & listening on port 4000.");
+      console.log("Connected to Server & listening on port 3000...");
     });
   })
   .catch((err) => {
     console.log(err);
   });
-
-// port listener
-// app.listen(process.env.PORT, () => {
-//   console.log(`Server is listening on port ${process.env.PORT}...`);
-// });
 
 // use routes
 
@@ -49,6 +44,6 @@ mongoose
 app.use("/api/checklists/", checkListRoutes);
 
 // DISPLAY ROUTES
-// app.get("/", (req, res) => {
-//   res.json({ msg: "Hello World!" });
-// });
+app.get("/", (req, res) => {
+  res.json({ msg: "Hello World!" });
+});

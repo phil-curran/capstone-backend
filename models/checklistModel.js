@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 const checklistSchema = new Schema(
   {
     // entryDate string
-    entryDate: {
+    entryDateString: {
       type: String,
       required: true,
     },
