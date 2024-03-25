@@ -3,11 +3,12 @@ import {
   getChecklist,
   getChecklists,
   createChecklist,
-} from "../controllers/checklistController";
+  deleteChecklist,
+} from "../controllers/checklistController.js";
 
 const router = Router();
 
-// routes
+// // routes
 // GET all workouts
 router.get("/", getChecklists);
 
@@ -18,7 +19,7 @@ router.get("/:id", getChecklist);
 router.post("/", createChecklist);
 
 // // DELETE a workout
-// router.delete("/:id", deleteWorkout);
+router.delete("/:id", deleteChecklist);
 
 // // UPDATE a workout
 // router.patch("/:id", updateWorkout);

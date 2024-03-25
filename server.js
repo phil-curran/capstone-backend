@@ -16,14 +16,20 @@ app.use((req, res, next) => {
   console.log("---");
   next();
 });
+
 // json
 app.use(express.json());
 
 // routes
 import checkListRoutes from "./routes/checklists.js";
 
-// use routes
+// API ROUTES
 app.use("/api/checklists/", checkListRoutes);
+
+// DISPLAY ROUTES
+app.get("/", (req, res) => {
+  res.json({ msg: "Hello World!" });
+});
 
 // connect to db
 mongoose
@@ -37,13 +43,3 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
-// use routes
-
-// API ROUTES
-app.use("/api/checklists/", checkListRoutes);
-
-// DISPLAY ROUTES
-app.get("/", (req, res) => {
-  res.json({ msg: "Hello World!" });
-});
