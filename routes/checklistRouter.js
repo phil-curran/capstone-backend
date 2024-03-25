@@ -6,7 +6,7 @@ import {
   deleteChecklist,
 } from "../controllers/checklistController.js";
 
-const router = Router();
+const checklistRouter = Router();
 
 // // routes
 // GET all workouts
@@ -24,4 +24,4 @@ router.delete("/:id", deleteChecklist);
 // // UPDATE a workout
 // router.patch("/:id", updateWorkout);
 
-export default router;
+export default checklistRouter;

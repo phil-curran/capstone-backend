@@ -21,10 +21,12 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // routes
-import checkListRoutes from "./routes/checklists.js";
+import checklistRouter from "./routes/checklistRouter.js";
+const userRouter = require("./routes/userRouter");
 
 // API ROUTES
-app.use("/api/checklists/", checkListRoutes);
+app.use("/api/checklists/", checklistRouter);
+app.use("/api/user/", userRouter);
 
 // DISPLAY ROUTES
 app.get("/", (req, res) => {
