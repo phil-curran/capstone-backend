@@ -7,8 +7,16 @@ const loginUser = async (req, res) => {
 };
 
 // singup user
-const signupUser = async (req, res) => {
-  res.json({ msg: "sign up user route" });
+// sign up user
+const registerUser = async (req, res) => {
+  console.log(req.body);
+  const { email, password } = req.body;
+  try {
+    const user = await UserModel.register(email, password);
+    res.status(200).json({ email, user });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
 };
 
-export { loginUser, signupUser };
+export { loginUser, registerUser };

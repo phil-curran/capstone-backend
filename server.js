@@ -22,7 +22,7 @@ app.use(express.json());
 
 // routes
 import checklistRouter from "./routes/checklistRouter.js";
-const userRouter = require("./routes/userRouter");
+import userRouter from "./routes/userRouter.js";
 
 // API ROUTES
 app.use("/api/checklists/", checklistRouter);
