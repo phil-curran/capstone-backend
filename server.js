@@ -3,6 +3,11 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
+import cors from "cors";
+
+// routes
+import checklistRouter from "./routes/checklistRouter.js";
+import userRouter from "./routes/userRouter.js";
 
 // initialize app
 const app = express();
@@ -20,18 +25,12 @@ app.use((req, res, next) => {
 // json
 app.use(express.json());
 
-// routes
-import checklistRouter from "./routes/checklistRouter.js";
-import userRouter from "./routes/userRouter.js";
+// cors
+app.use(cors());
 
 // API ROUTES
 app.use("/api/checklists/", checklistRouter);
 app.use("/api/user/", userRouter);
-
-// DISPLAY ROUTES
-app.get("/", (req, res) => {
-  res.json({ msg: "Hello World!" });
-});
 
 // connect to db
 mongoose
@@ -39,7 +38,7 @@ mongoose
   .then(() => {
     // start server
     app.listen(process.env.PORT, () => {
-      console.log("Connected to Server & listening on port 3000...");
+      console.log("Connected to Server & listening on port", process.env.PORT);
     });
   })
   .catch((err) => {

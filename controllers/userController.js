@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import UserModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 
