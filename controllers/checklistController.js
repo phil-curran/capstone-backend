@@ -24,7 +24,7 @@ const createChecklist = async (req, res) => {
 // READ
 // GET All Checklists
 const getChecklists = async (req, res) => {
-  const checklists = await Checklist.find({}).sort({ createdAt: -1 });
+  const checklists = await Checklist.find({}).sort({ createdAt: 1 });
   res.status(200).json(checklists);
 };
 
