@@ -1,6 +1,6 @@
 # <p align="center">trakr - backend</p>
 
-Like weather.com, but better, and without the annoying ads.
+A full-stack app that helps you keep track of important habits and tasks.
 
 ## Table of Contents
 
@@ -13,36 +13,25 @@ Like weather.com, but better, and without the annoying ads.
 
 ## Technologies Used <a id="technologies"></a>
 
-- HTML / CSS / Javascript
+- Javascript
+- [Express](https://expressjs.com/)
 - React / [Vite.js](https://vitejs.dev/)
-- [React Router](https://reactrouter.com/en/main)
-- [Chakra UI](https://chakra-ui.com/)
-- [OpenWeather API](https://openweathermap.org/api/one-call-3)
+- [MongoDb](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/docs/)
+- [bcrypt](https://www.npmjs.com/package/bcrypt) + [jsonwebtoken](https://jwt.io/)
 
 ## Description <a id="description"></a>
 
-Like weather,com, but without all of the annoying ads / tracking..
-
-## Views
-
-Current Weather:
-![alt text](./public/now.png)
-
-Hourly Forecast:
-![alt text](./public/hourly.png)
-
-10-day Forecast:
-![alt text](./public/10-day.png)
+This backend manages content for the frontend of [trakr - frontend](https://expressjs.com/). It is built with Express and MongoDB, and uses bcrypt and jsonwebtoken for user authentication.
 
 ## Project Setup / Installation Instructions <a id="setup"></a>
 
-### Get an API KEY from OpenWeather
+### Set up an account / cluster with MongoDB
 
-https://openweathermap.org/api/one-call-3
+https://www.mongodb.com/
 
-### Clone the project
+### Clone the project into a new directory
 
-Clone this project: <code>git clone [https://github.com/phil-curran/SBA320H](https://github.com/phil-curran/SBA320H)</code>
+Clone this project: <code>git clone [\[https://github.com/phil-curran/SBA320H](https://github.com/phil-curran/capstone-backend)](https://github.com/phil-curran/SBA320H)</code>
 
 ### Install Dependencies
 
@@ -50,11 +39,13 @@ From the root directory, run: <code>npm i</code>
 
 ### Update example.env file
 
-Rename <code>example.env</code> to <code>.env</code> and replace " Your API Key Here. " with your actual API Key from OpenWeather.
+Rename <code>example.env</code> to <code>.env</code> and replace the information therein with your actual MongoDb URI and desired json web token hash..
 
 ### Run the project
 
 From the root directory, run: <code>npm run dev</code>
+
+Then, test all routes with Postman or a similar tool.
 
 ## Known Bugs <a id="bugs"></a>
 
@@ -62,12 +53,7 @@ None at this time.
 
 ## Roadmap
 
-- Implement Google's [Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) to allow for custom location selection
-- Pin favorite locations to toolbar with localStorage
-- Add a modal component that lets users store their api key in localStorage
-- UI improvements
-- Update Hourly section to show day / date break between days.
-- More custom icons
+- Update the app so that user is capable of modifying the main schema for habit checklists by adding, removing, or renaming fields from the default checklist, or choosing from a list of pre-made checklists.
 
 ## License <a id="license"></a>
 
