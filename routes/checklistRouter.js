@@ -5,8 +5,11 @@ import {
   createChecklist,
   deleteChecklist,
 } from "../controllers/checklistController.js";
+import requireAuth from "../middleware/authMiddleware.js";
 
 const checklistRouter = Router();
+
+checklistRouter.use(requireAuth);
 
 // // routes
 // GET all workouts

@@ -4,39 +4,16 @@ import Checklist from "../models/checklistModel.js";
 // CREATE
 // POST / create a new workout
 const createChecklist = async (req, res) => {
-  const {
-    entryDateString,
-    timeDown,
-    timeUp,
-    totalDuration,
-    score,
-    timeAsleepScore,
-    durationAsleep,
-    durationAwake,
-    deepAndREMScore,
-    deepSleep,
-    percentREM,
-    restorationScore,
-    sleepHR,
-    restlessness,
-  } = req.body;
+  const { entryDateString, task1, task2, task3, task4, task5 } = req.body;
   console.log("request: ", req.body);
   try {
     const checklist = await Checklist.create({
       entryDateString,
-      timeDown,
-      timeUp,
-      totalDuration,
-      score,
-      timeAsleepScore,
-      durationAsleep,
-      durationAwake,
-      deepAndREMScore,
-      deepSleep,
-      percentREM,
-      restorationScore,
-      sleepHR,
-      restlessness,
+      task1,
+      task2,
+      task3,
+      task4,
+      task5,
     });
     res.status(200).json({ checklist });
   } catch (err) {

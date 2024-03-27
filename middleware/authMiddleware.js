@@ -9,7 +9,7 @@ const requireAuth = async (req, res, next) => {
     return res.status(401).json({ error: "Authorization token required" });
   }
 
-  const token = authorization.split(" ")[1];
+  const token = authorization.replace("Bearer ", "");
 
   try {
     const { _id } = jwt.verify(token, process.env.SECRET_KEY);
