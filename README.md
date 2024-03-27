@@ -1,6 +1,6 @@
 # <p align="center">trakr - backend</p>
 
-A full-stack app that helps you keep track of important habits and tasks.
+A full-stack MERN app that helps you keep track of important habits and tasks.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ A full-stack app that helps you keep track of important habits and tasks.
 
 ## Description <a id="description"></a>
 
-This backend manages content for the frontend of [trakr - frontend](https://expressjs.com/). It is built with Express and MongoDB, and uses bcrypt and jsonwebtoken for user authentication.
+This backend manages content for the frontend of [trakr - frontend](https://github.com/phil-curran/capstone-frontend). It is built with Express and MongoDB, and uses bcrypt and jsonwebtoken for user authentication.
 
 ## Project Setup / Installation Instructions <a id="setup"></a>
 
