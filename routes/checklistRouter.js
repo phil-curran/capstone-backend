@@ -12,19 +12,19 @@ const checklistRouter = Router();
 checklistRouter.use(requireAuth);
 
 // // routes
-// GET all workouts
+// GET all checklists
 checklistRouter.get("/", getChecklists);
 
-// GET a single workout
+// GET a single checklists
 checklistRouter.get("/:id", getChecklist);
 
-// POST a new workout
+// POST a new checklists
 checklistRouter.post("/", createChecklist);
 
-// // DELETE a workout
+// // DELETE a checklists
 checklistRouter.delete("/:id", deleteChecklist);
 
-// // UPDATE a workout
-// router.patch("/:id", updateWorkout);
+// // UPDATE a checklists
+// checklistRouter.patch("/:id", updateChecklist);
 
 export default checklistRouter;
